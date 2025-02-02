@@ -140,21 +140,19 @@ tree.pack(pady=10)
 display_button = tk.Button(root, text="csv عرض محتويات ملف", command=display_csv_content)
 display_button.pack(pady=10)
 
-# تعليمات الحالة
-status_label = tk.Label(root, text="")
-status_label.pack(pady=10)
-
-
-# تعليمات الحالة
-status_label = tk.Label(root, text="")
-status_label.pack(pady=10)
-
 # Add a label with Arabic text
 label = tk.Label(root, text="صلى الله على محمد", font=("Arial", 28))
 label.pack(pady=30)
 
-def open_youtube_link(event):
-    webbrowser.open_new("https://youtu.be/5fqV9g6HON0")
 
+def open_youtube_link(event):
+    webbrowser.open_new("https://www.youtube.com/watch?v=taMXy4LO2Ps")
+
+# Create a label for the YouTube link
+youtube_link_label = tk.Label(root, text="youtube video about app", font=("Arial", 14), fg="blue", cursor="hand2")
+youtube_link_label.pack()
+
+# Bind the label to the mouse click event
+youtube_link_label.bind("<Button-1>", open_youtube_link)
 
 root.mainloop()
